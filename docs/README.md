@@ -8,6 +8,8 @@
 
 ## 자동차 이름 입력 받기 (n대)
 + camp.nextstep.edu.missionutils.Console 라이브러리의 **readLine**로 자동차 이름을 입력 받는다.
+
+## 자동차 이름 분리하기
 + 입력받은 자동차를 split()를 통해 (,)로 문자열을 구분한다.
 + 구분한 자동차를 Array 혹은 List에 담는다.
     
