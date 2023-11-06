@@ -14,7 +14,7 @@
 + 구분한 자동차를 Array 혹은 List에 담는다.
 
 ## HashMap에 입력 값 넣기
-* String, Interger 형식으로 관리하기 위해 자동차 이름들을 HashMap 형태로 관리.
++ String, Interger 형식으로 관리하기 위해 자동차 이름들을 HashMap 형태로 관리.
 
 ## 횟수 입력하기
 + camp.nextstep.edu.missionutils.Console 라이브러리의 **readLine**으로 이동 횟수를 입력 받는다.  

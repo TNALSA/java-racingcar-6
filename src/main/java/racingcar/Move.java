@@ -1,9 +1,13 @@
 package racingcar;
 import camp.nextstep.edu.missionutils.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Move {
-    int num = Randoms.pickNumberInRange(0,9);
+    Input input;
     String status = "";
+
     String forward(){ // 전진
         status.concat("-");
         return status;

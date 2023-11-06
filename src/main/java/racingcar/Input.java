@@ -1,16 +1,14 @@
 package racingcar;
 import camp.nextstep.edu.missionutils.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Input {
     String CarName;
     String Count;
+    int ranNumber = 0;
     List<String> CarList = new ArrayList<String>();
-    HashMap<String,Integer> CarMaps;
+    Map<String,String> CarMaps = new HashMap<String, String>();
 
     Input(){
         CarInput();
@@ -31,9 +29,10 @@ public class Input {
 
     void makeMap(){ // HashMap에 자동차 이름과 전진 수를 넣기 위한 메소드
         for(int i=0;i<CarList.size();i++){
-            CarMaps.put(CarList.get(i),0);
+            CarMaps.put(CarList.get(i),"");
         }
     }
+
     void CountInput(){ // 횟수 입력하기
         System.out.println("시도할 회수는 몇회인가요?"); 
         Count = Console.readLine();
