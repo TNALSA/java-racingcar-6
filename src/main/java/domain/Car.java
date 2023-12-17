@@ -14,10 +14,10 @@ public class Car {
     public void setName(String name) {
         this.name = name;
     }
+
     public int getDistance() {
         return distance;
     }
-
     public void setDistance(int distance) {
         this.distance = distance;
     }
