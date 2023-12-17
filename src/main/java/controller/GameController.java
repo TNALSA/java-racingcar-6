@@ -55,8 +55,9 @@ public class GameController {
     }
 
     void output(){
+        System.out.println("\n실행결과");
         for (Car cars: list) {
-            System.out.println(cars.getName()+":"+"-".repeat(cars.getDistance()));
+            System.out.println(cars.getName()+" : "+"-".repeat(cars.getDistance()));
         }
     }
 
