@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringJoiner;
 
+import static messages.errorMessage.NAME_LENGTH_MESSAGE;
+
 public class GameController {
     String CarName = null; // 자동차 이름
     String Count = null; // 횟수
@@ -26,7 +28,7 @@ public class GameController {
         String[] CarArray = CarName.split(","); // 자동차 구분하기
         for(int i=0;i<CarArray.length;i++){
             if(CarArray[i].length()>=5){
-                throw new IllegalArgumentException("사용자 이름은 5자 이하로 입력해주세요");
+                throw new IllegalArgumentException(NAME_LENGTH_MESSAGE.getMessage());
             }
             list.add(new Car(CarArray[i],0));
         }

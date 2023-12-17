@@ -5,9 +5,10 @@
 
 # Controller
 - - -
-
 ## GameController.java
+
 + camp.nextstep.edu.missionutils.Console 라이브러리의 **readLine**로 자동차 이름을 입력 받는다.
+
 
 # Model
 - - -
