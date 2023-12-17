@@ -10,6 +10,10 @@ import java.util.StringJoiner;
 
 import static messages.errorMessage.NAME_LENGTH_MESSAGE;
 
+import static messages.inputMessage.INPUT_COUNT_MESSAGE;
+import static messages.inputMessage.INPUT_CAR_MESSAGE;
+
+import static messages.outputMessage.*;
 public class GameController {
     String CarName = null; // 자동차 이름
     String Count = null; // 횟수
@@ -23,7 +27,7 @@ public class GameController {
     }
 
     void inputCar(){
-        System.out.println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)");
+        System.out.println(INPUT_CAR_MESSAGE.getMessage());
         CarName = Console.readLine();
         String[] CarArray = CarName.split(","); // 자동차 구분하기
         for(int i=0;i<CarArray.length;i++){
@@ -34,7 +38,7 @@ public class GameController {
         }
     }
     void inputCount(){
-        System.out.println("시도할 회수는 몇회인가요?");
+        System.out.println(INPUT_COUNT_MESSAGE.getMessage());
         Count = Console.readLine();
     }
 
@@ -44,6 +48,7 @@ public class GameController {
     }
 
     void race(){
+        System.out.println(OUTPUT_RESULT_MESSAGE.getMessage());
         for(int i=0;i<Integer.parseInt(Count);i++){
             for(int j=0;j<list.size();j++){
                 int num = pickNumber();
@@ -57,9 +62,9 @@ public class GameController {
     }
 
     void output(){
-        System.out.println("\n실행결과");
+
         for (Car cars: list) {
-            System.out.println(cars.getName()+" : "+"-".repeat(cars.getDistance()));
+            System.out.println(cars.getName()+OUTPUT_SEPARATOR_MESSAGE.getMessage()+OUTPUT_PROGRESS_MESSAGE.getMessage().repeat(cars.getDistance()));
         }
     }
 
@@ -78,7 +83,7 @@ public class GameController {
         int top = findTop();
         String winners = "";
 
-        StringJoiner sj = new StringJoiner(", "); // 문자열을 구분자로 이어 붙이는 Class
+        StringJoiner sj = new StringJoiner(OUTPUT_WINNER_SEPARATOR_MESSAGE.getMessage()); // 문자열을 구분자로 이어 붙이는 Class
 
         for (int i=0;i<list.size();i++){
             if(list.get(i).getDistance()==top){
@@ -87,6 +92,6 @@ public class GameController {
         }
         winners = sj.toString();
 
-        System.out.println("최종 우승자 : "+winners);
+        System.out.println(OUTPUT_WINNER_MESSAGE.getMessage()+winners);
     }
 }
